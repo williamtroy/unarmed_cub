@@ -13,12 +13,6 @@ export default (props) => {
           return (i.id ? <UserThumb key={i.id} user={i} /> : null);
         })}
       </div>
-      <ClipLoader
-        sizeUnit={"px"}
-        size={150}
-        color={'#123abc'}
-        loading={true}
-      />
     </React.Fragment>
   );
 };
