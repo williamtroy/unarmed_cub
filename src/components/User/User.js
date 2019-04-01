@@ -4,6 +4,7 @@ import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import { connect } from 'react-redux';
 import { BarLoader } from 'react-spinners';
+import { userAvatar } from './User.module.scss';
 
 
 const USER_QUERY = gql`
@@ -76,7 +77,7 @@ class User extends Component {
             <React.Fragment>
               <div className="row">
                 <div className="col-md-3">
-                  <img className="rounded" src={user.avatarUrl}></img>
+                  <img className={userAvatar + " rounded"} src={user.avatarUrl}></img>
                   <div className="h3">{user.name}</div>
                   <div className="text-muted">{user.login}</div>
                 </div>
