@@ -4,6 +4,7 @@ import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import { connect } from 'react-redux';
 import { updateSearchResults } from '../../store/actions';
+import { BarLoader } from 'react-spinners';
 
 
 const USER_QUERY = gql`
@@ -66,7 +67,7 @@ class User extends Component {
     const query = this.props.match.params.id ?
       <Query query={USER_QUERY} variables={{ user: this.props.match.params.id }}>
         {({ loading, error, data }) => {
-          if (loading) return <div>Fetching</div>
+          if (loading) return <BarLoader sizeUnit={"px"} width={200} height={16} color={'#343a40'} />
           if (error) return <div>Error</div>
 
           const user = data.user;
