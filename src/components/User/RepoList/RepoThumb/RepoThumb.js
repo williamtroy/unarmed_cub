@@ -21,7 +21,7 @@ export default (props) => {
         <span className="pr-3"><i className="fas fa-code-branch" /> {props.repo.forkCount}</span>
         <span className="pr-3"><i className="fas fa-balance-scale" /> {props.repo.licenseInfo ? props.repo.licenseInfo.name : null}</span>
         <span className="pr-3">{props.repo.issues.totalCount} issues need help</span>
-        <span className=""><TimeAgo date={props.repo.updatedAt} /></span>
+        <span className="">Last Updated <TimeAgo date={props.repo.updatedAt} /></span>
       </div>
     </div >
   );
