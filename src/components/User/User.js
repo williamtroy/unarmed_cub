@@ -27,11 +27,14 @@ query($user: String!) {
           stargazers(first: 0) {
             totalCount
           },
-          labels(first: 10) {
+          repositoryTopics(first: 10) {
             nodes {
-              ... on Label {
+              ... on RepositoryTopic {
                 id,
-                name
+                topic {
+                  id,
+                  name
+                }
               }
             }
           },

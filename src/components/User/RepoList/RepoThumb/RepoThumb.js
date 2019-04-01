@@ -4,7 +4,7 @@ import TimeAgo from 'react-timeago'
 import { repoThumb } from './RepoThumb.module.scss';
 
 export default (props) => {
-  const labels = props.repo.labels.nodes.map(i => <span className="badge badge-info mr-1" key={i.id}>{i.name}</span>);
+  const labels = props.repo.repositoryTopics.nodes.map(i => <span className="badge badge-info mr-1" key={i.id}>{i.topic.name}</span>);
   return (
     <div className={repoThumb + " py-4"}>
       <a className="h4" href="#">{props.repo.name}</a>
