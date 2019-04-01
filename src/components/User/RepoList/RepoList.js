@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import RepoThumb from './RepoThumb/RepoThumb'
 
 export default (props) => {

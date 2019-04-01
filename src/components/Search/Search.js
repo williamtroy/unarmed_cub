@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import { List, fromJS, update } from 'immutable';
 import UserSearch from './UserSearch/UserSearch';
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import { connect } from 'react-redux';
-import { updateSearchResults } from '../../store/actions';
 import { BarLoader } from 'react-spinners';
 
 const FEED_QUERY = gql`
@@ -38,9 +36,7 @@ const mapState = state => {
 };
 
 const mapDispatch = dispatch => {
-  return {
-    updateSearchResults: updateSearchResults(dispatch)
-  };
+  return {};
 };
 
 class Search extends Component {

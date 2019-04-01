@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import UserThumb from './UserThumb/UserThumb';
 import { ClipLoader } from 'react-spinners';
 

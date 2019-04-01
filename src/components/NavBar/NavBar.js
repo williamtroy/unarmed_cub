@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import SearchBar from './SearchBar/SearchBar';
 import { connect } from 'react-redux';
-import { updateSearch, FORM_SUBMITTED } from '../../store/actions';
+import { updateSearch } from '../../store/actions';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 

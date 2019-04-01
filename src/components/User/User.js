@@ -3,7 +3,6 @@ import RepoList from './RepoList/RepoList';
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import { connect } from 'react-redux';
-import { updateSearchResults } from '../../store/actions';
 import { BarLoader } from 'react-spinners';
 
 
@@ -57,9 +56,7 @@ const mapState = state => {
 };
 
 const mapDispatch = dispatch => {
-  return {
-    updateSearchResults: updateSearchResults(dispatch)
-  };
+  return {};
 };
 
 class User extends Component {
